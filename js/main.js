@@ -17,8 +17,8 @@ $(function () {
     });
 
     // ハンバーガーメニュー
-    windowHeight = $(window).height();
-    $('.drawr').css('height', windowHeight);
+    // windowHeight = $(window).height();
+    // $('.drawr').css('height', windowHeight);
 
     $(document).ready(function () {
         $('.header-humberger').click(function () {
