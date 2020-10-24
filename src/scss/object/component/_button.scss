@@ -1,0 +1,67 @@
+// btnのcolor指定
+@mixin btnColor($borderColor, $bgColor, $color, $afterBorderColor, $afterBgColor, $afterColor) {
+    border: 3px solid $borderColor;
+    background-color: $bgColor;
+    color: $color;
+
+    &:focus,
+    &:hover {
+        border-color: $afterBorderColor;
+        background-color: $afterBgColor;
+        color: $afterColor;
+    }
+}
+
+.btn {
+    @include font("Rounded Mplus 1c", 700, 2.6rem, 0.05em);
+    display: inline-block; // 親のtex-alignを引き継ぐ
+    width: 470px; // 長いテキストが入る場合、改行される
+    // heightは指定しない。テキストが改行されたときボタンからはみ出す。
+    max-width: 100%; // スクリーンサイズが小さくなった場合、ボタンが見切れないようにする。
+    padding: 30px;
+    margin-right: 40px;
+    text-align: center;
+    border-radius: 100px;
+    transition: 0.25s;
+
+    &:last-child {
+        margin-right: 0;
+    }
+    .icon {
+        margin-right: 10px;
+        font-size: 3.2rem;
+    }
+}
+@include container {
+    .btn {
+        @include font("Rounded Mplus 1c", 700, 2.4rem, 0.05em);
+        padding: 20px 10px;
+        margin: 0 10px 15px 10px;
+        width: 94%;
+
+        &:last-child {
+            margin: 0 10px 0 10px;
+        }
+
+        .icon {
+            margin-right: 5px;
+            font-size: 2.8rem;
+        }
+    }
+}
+
+.btn__main-color--bg-white {
+    @include btnColor(transparent, $white, $mainColor, $white, $mainColor, $white);
+}
+
+.btn__main-color--bg-main {
+    @include btnColor(transparent, $mainColor, $white, $mainColor, $white, $mainColor);
+}
+
+.btn__sub-color--bg-white {
+    @include btnColor($subColor, $white, $subColor, $subColor, $subColor, $white);
+}
+
+.btn__sub-color--bg-sub {
+    @include btnColor(transparent, $subColor, $white, $subColor, $white, $subColor);
+}

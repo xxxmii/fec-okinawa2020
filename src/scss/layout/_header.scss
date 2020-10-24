@@ -1,0 +1,108 @@
+header {
+    background-color: $mainColor;
+    width: 100vw;
+    position: relative;
+}
+
+.header__nav {
+    .header__nav-list {
+        padding: 15px 0;
+
+        .header__nav-list-item {
+            @include font('verveine', 400, 2.5rem, 0.05em);
+            display: inline-block;
+            padding-right: 40px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+
+    }
+}
+
+@include tab {
+    .header__nav {
+        height: 15px;
+
+        .header__nav-list {
+            display: none;
+        }
+    }
+};
+
+.header__nav-sp-logo {
+    width: 128px;
+    display: block;
+    margin: 30px auto;
+}
+
+
+.header__nav-sp {
+    .header__nav-sp-list {
+        width: 80%;
+        padding: 15px 0;
+        margin: 30px;
+
+        .header__nav-sp-list-item {
+            @include font('verveine', 400, 2.5rem, 0.05em);
+            margin-bottom: 20px;
+        }
+    }
+}
+.header-humberger {
+    background-color: $mainColor;
+    width: 60px;
+    height: 60px;
+    border: solid 1px $white;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+
+    .header-humberger-border {
+        position: absolute;
+        left: 15px;
+        width: 30px;
+        height: 2px;
+        background: $white;
+        border-radius: 3px;
+        transition: all 0.3s;
+        transform: rotate(0deg);
+    }
+
+    .top {
+        top: 18px;
+    }
+
+    .middle {
+        top: 28px;
+    }
+
+    .bottom {
+        top: 38px;
+    }
+}
+
+.is-open {
+    .middle {
+        background: rgba(255, 255, 255, 0) !important;
+    }
+    .top {
+        transform: rotate(-45deg) translate(-8px, 8px) !important;
+    }
+    .bottom {
+        transform: rotate(45deg) translate(-6px, -6px) !important;
+    }
+}
+
+.drawr {
+    display: none;
+    background-color: $mainColor;
+    position: fixed;
+    top: 0px;
+    right:0;
+    width:160px;
+    z-index: 5;
+}

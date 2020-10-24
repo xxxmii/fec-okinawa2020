@@ -1,0 +1,39 @@
+.mt-100 {
+    margin-top: 100px !important;
+}
+
+.mb-80 {
+    margin-bottom: 80px !important;
+}
+
+.mb-60 {
+    margin-bottom: 60px !important;
+}
+
+.mr-50-denial {
+    margin-right: -50px !important;
+}
+
+@include container {
+    .mr-50-denial {
+        margin-right: 0 !important;
+    }
+}
+
+@include sp {
+    .mt-100 {
+        margin-top: 50px !important;
+    }
+
+    .mb-80 {
+        margin-bottom: 40px !important;
+    }
+
+    .mb-60 {
+        margin-bottom: 30px !important;
+    }
+
+    .mr-50-denial {
+        margin-right: 0 !important;
+    }
+}

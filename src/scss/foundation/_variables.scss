@@ -1,0 +1,99 @@
+// ***************************************************
+// width
+// ***************************************************
+$containerWidth: 1000px;
+
+
+// ***************************************************
+// color
+// ***************************************************
+$mainColor: #B64E30;
+$mainColorOpacity: #F7EDEA;
+$subColor: #4C989F;
+$subColorOpacity: #EEF4F5;
+$white: #FFFFFF;
+
+
+// ***************************************************
+// font
+//  ※補足 [font-weight]Regular > 400, Medium > 500, Bold > 700
+// ***************************************************
+@mixin font($family, $weight, $size, $letter-spacing) {
+    font-family: $family , sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: $size;
+    letter-spacing: $letter-spacing;
+}
+
+
+// ***************************************************
+// media query
+// ***************************************************
+$minSpWidth: 320px;
+$minTabWidth: 544px;
+$minLaptopWidth: 992px;
+$minPcWidth: 1200px;
+$maxSpWidth: 543px;
+$maxTabWidth: 991px;
+$maxLaptopWidth:1199px;
+@mixin sp {
+    @media (max-width: $maxSpWidth) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: $maxTabWidth) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: $maxLaptopWidth) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media (min-width: $minPcWidth) {
+        @content;
+    }
+}
+
+@mixin container {
+    @media (max-width: $containerWidth) {
+        @content;
+    }
+}
+
+// ***************************************************
+// bg-line
+// ***************************************************
+@mixin bg-line-water($top-url, $bottom-url) {
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -10px;
+        width: 100%;
+        height: 15px;
+        background-image: $top-url;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 15px;
+        background-image: $bottom-url;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,28 @@
+// スクロール
+.scroll {
+    // padding: 50px 0;
+
+    .scroll-title {
+        @include font('verveine', 400, 30px, 0.03em);
+    }
+
+    .scroll-arrow-img {
+        width: 40px;
+        padding-top: 15px;
+    }
+}
+
+// スクロールアイコン
+.icon-scroll {
+    width: 120px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+// 画像反転
+.up-down-inversion {
+    transform: scale(1, -1);
+}
