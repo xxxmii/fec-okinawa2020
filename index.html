@@ -1,23 +1,81 @@
 <!DOCTYPE html>
-<% var description = 'top'; %>
+
 <html lang="en">
-<% include ./_common/_head.ejs %>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="author" href="./humans.txt" />
+    <meta name="robots" content="noindex">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,500,700&display=swap&subset=japanese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/wxx4xzj.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/main.js" defer></script>
+</head>
 
 <body>
-    <% include ./_layout/_header.ejs %>
+    <header id="header">
+        <div class="container">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-list-item"><a href="#about">About</a></li>
+                    <li class="header__nav-list-item"><a href="#news">News</a></li>
+                    <li class="header__nav-list-item"><a href="#session">Session</a></li>
+                    <li class="header__nav-list-item"><a href="#timetable">Timetable</a></li>
+                    <li class="header__nav-list-item"><a href="#sponsor">Sponsor</a></li>
+                    <li class="header__nav-list-item"><a href="#staff">Staff</a></li>
+                    <li class="header__nav-list-item"><a href="#contact">Contact</a></li>
+                    <li class="header__nav-list-item"><a href="#share">Share</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="drawr">
+            <figure>
+                <img class="header__nav-sp-logo" src="./img/logo.svg" alt="">
+            </figure>
+            <nav class="header__nav-sp">
+                <ul class="header__nav-sp-list">
+                    <li class="header__nav-sp-list-item"><a href="#about">About</a></li>
+                    <li class="header__nav-sp-list-item"><a href="#news">News</a></li>
+                    <li class="header__nav-sp-list-item"><a href="#session">Session</a></li>
+                    <li class="header__nav-sp-list-item"><a href="#timetable">Timetable</a></li>
+                    <li class="header__nav-sp-list-item"><a href="#sponsor">Sponsor</a></li>
+                    <li class="header__nav-sp-list-item"><a href="#staff">Staff</a></li>
+                    <li class="header__nav-sp-list-item"><a href="#contact">Contact</a></li>
+                    <li class="header__nav-sp-list-item"><a href="#share">Share</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-humberger js-header-humberger sp-show">
+            <span class="header-humberger-border top"></span>
+            <span class="header-humberger-border middle"></span>
+            <span class="header-humberger-border bottom"></span>
+        </div>
+    </header>
 
     <main class="main">
         <article class="top">
             <div class="container mt-100">
                 <div class="top__mv mb-80">
-                    <img class="top-crowd1-img" src="../img/icon_crowd_1.svg" alt="">
-                    <img class="top-crowd2-img" src="../img/icon_crowd_2.svg" alt="">
-                    <img class="top-crowd3-img" src="../img/icon_crowd_3.svg" alt="">
-                    <img class="top-crowd4-img" src="../img/icon_crowd_4.svg" alt="">
-                    <img class="top-crowd5-img" src="../img/icon_crowd_5.svg" alt="">
+                    <img class="top-crowd1-img" src="./img/icon_crowd_1.svg" alt="">
+                    <img class="top-crowd2-img" src="./img/icon_crowd_2.svg" alt="">
+                    <img class="top-crowd3-img" src="./img/icon_crowd_3.svg" alt="">
+                    <img class="top-crowd4-img" src="./img/icon_crowd_4.svg" alt="">
+                    <img class="top-crowd5-img" src="./img/icon_crowd_5.svg" alt="">
 
                     <figure>
-                        <img class="top__mv-img" src="../img/mv.svg" alt="">
+                        <img class="top__mv-img" src="./img/mv.svg" alt="">
                     </figure>
                     <h1 class="top__mv_title">FRONTEND<br>CONFERENCE<br>OKINAWA<br><span
                             class="top__mv-title--emphasis">2020</span>
@@ -25,7 +83,7 @@
                 </div>
                 <div class="scroll mb-60 sp-none">
                     <p class="scroll-title">scroll</p>
-                    <a href="#about"><img class="scroll-arrow-img" src="../img/arrow.svg" alt=""></a>
+                    <a href="#about"><img class="scroll-arrow-img" src="./img/arrow.svg" alt=""></a>
                 </div>
             </div>
         </article>
@@ -48,7 +106,7 @@
                 <section class="content-section">
                     <div class="content-section__head">
                         <h2 class="content-section__head-title">About</h2>
-                        <img class="content-section__head-img" src="../img/underline.svg" alt="">
+                        <img class="content-section__head-img" src="./img/underline.svg" alt="">
                     </div>
                     <section>
                         <div class="content-section__content">
@@ -69,7 +127,7 @@
                 <section class="content-section">
                     <div class="content-section__head">
                         <h2 class="content-section__head-title">News</h2>
-                        <img class="content-section__head-img" src="../img/underline.svg" alt="">
+                        <img class="content-section__head-img" src="./img/underline.svg" alt="">
                     </div>
                     <div class="content-section__content">
                         <table class="news__list">
@@ -104,7 +162,7 @@
                 <section class="content-section">
                     <div class="content-section__head">
                         <h2 class="content-section__head-title">Session</h2>
-                        <img class="content-section__head-img" src="../img/underline.svg" alt="">
+                        <img class="content-section__head-img" src="./img/underline.svg" alt="">
                     </div>
                     <div class="content-section__content">
                         <section class="content-section__section">
@@ -171,12 +229,12 @@
                 <section class="content-section">
                     <div class="content-section__head">
                         <h2 class="content-section__head-title">Timetable</h2>
-                        <img class="content-section__head-img" src="../img/underline.svg" alt="">
+                        <img class="content-section__head-img" src="./img/underline.svg" alt="">
                     </div>
                     <div class="content-section__content">
                         <div class="time-table-wrapper">
                             <table class="time-table" id="table-scroll">
-                                <img id="icon-scroll" class="icon-scroll sp-show" src="../img/icon_scroll.svg" alt="">
+                                <img id="icon-scroll" class="icon-scroll sp-show" src="./img/icon_scroll.svg" alt="">
                                 <tr class="time-table__header-row">
                                     <th class="time-table__header-timeroom right_up_border">
                                         <p><span class="positon-bottom-left">TIME</span><span
@@ -294,7 +352,7 @@
                 <section class="content-section">
                     <div class="content-section__head">
                         <h2 class="content-section__head-title">Sponsor</h2>
-                        <img class="content-section__head-img" src="../img/underline.svg" alt="">
+                        <img class="content-section__head-img" src="./img/underline.svg" alt="">
                     </div>
                     <div class="content-section__content">
                         <div class="sponsor__contents">
@@ -372,7 +430,7 @@
                 <section class="content-section">
                     <div class="content-section__head">
                         <h2 class="content-section__head-title">Staff</h2>
-                        <img class="content-section__head-img" src="../img/underline.svg" alt="">
+                        <img class="content-section__head-img" src="./img/underline.svg" alt="">
                     </div>
                     <div class="content-section__content">
                         <div class="staff__members">
@@ -452,7 +510,7 @@
                 <section class="content-section">
                     <div class="content-section__head">
                         <h2 class="content-section__head-title">Contact</h2>
-                        <img class="content-section__head-img" src="../img/underline.svg" alt="">
+                        <img class="content-section__head-img" src="./img/underline.svg" alt="">
                     </div>
                     <div class="contact__content">
                         <p class="contact__content-lead">
@@ -465,7 +523,7 @@
                             <a class="btn btn__main-color--bg-main" href="#">カンファレンス参加申込み</a>
                             <a class="btn btn__main-color--bg-main" href="#">懇親会参加申込み</a>
                         </div>
-                        <img class="contact__icon-man sp-none" src="../img/icon_man.svg" alt="">
+                        <img class="contact__icon-man sp-none" src="./img/icon_man.svg" alt="">
                     </div>
                 </section>
             </div>
@@ -476,7 +534,7 @@
                 <section class="content-section">
                     <div class="content-section__head">
                         <h2 class="content-section__head-title">Share</h2>
-                        <img class="content-section__head-img" src="../img/underline_blue.svg" alt="">
+                        <img class="content-section__head-img" src="./img/underline_blue.svg" alt="">
                     </div>
                     <div class="content-section__content">
                         <div class="contact-btn">
@@ -496,14 +554,16 @@
         <article class="foot">
             <div class="container">
                 <div class="scroll">
-                    <a href="#header"><img class="scroll-arrow-img up-down-inversion" src="../img/arrow.svg" alt=""></a>
+                    <a href="#header"><img class="scroll-arrow-img up-down-inversion" src="./img/arrow.svg" alt=""></a>
                     <p class="scroll-title pagetop">pagetop</p>
                 </div>
             </div>
         </article>
     </main>
 
-    <% include ./_layout/_footer.ejs %>
+    <footer>
+        <p>Copyright 2020 Frontend Conference Okinawa <br class="sp-show">All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>
